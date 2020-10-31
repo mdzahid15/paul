@@ -1,0 +1,526 @@
+/*=========================
+
+CSS Index
+------------
+1.Google fonts
+2.Common CSS
+3.Reusable Components
+4.Heor Section
+5.About Section
+6.Process Section
+7.experience Section
+8.Work Section
+9.Testimonial Section
+10.Contact Section
+
+===========================*/
+/*1.google fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Roboto:wght@400;700&display=swap');
+/* 2.Common CSS */
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+html, body{
+    background-color: #fff;
+    font-size: 62.5%;
+    color: #98b4be;
+    text-rendering: optimizeLegibility;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    line-height: 1.5;
+
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+a:link,
+a:hover{
+    text-decoration: none;
+}
+/* 3.Reusable Components */
+.row{
+    max-width: 118rem;
+    margin:auto;
+}
+section{
+    padding:10rem 0;
+}
+img{
+    width:100%;
+}
+p{
+    font-size: 1.6rem;
+}
+.btn{
+    background-color: #000;
+    color:#fff;
+    padding:1.3rem 6rem;
+    font-size: 1.8rem;
+    text-transform: capitalize;
+}
+/*=========================
+4.Heor Section
+===========================*/
+#hero{
+    height:100vh;
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.65)), to(rgba(0, 0, 0, 0.60))),url(img/hero.jpg) no-repeat left top/ cover;
+    background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.60)),url(img/hero.jpg) no-repeat left top/ cover;
+    position:relative;
+    overflow: hidden;
+}
+nav{
+    overflow: hidden;
+}
+nav.uk-sticky-fixed {
+    background: rgba(0, 0, 0, 0.952);
+}
+nav.uk-sticky-fixed .logo,
+nav.uk-sticky-fixed .menu-icon{
+    margin:0;
+    margin: 1.5rem 0;
+}
+.logo{
+    width: 4rem;
+    float: left;
+    margin-top: 4rem;
+}
+.menu-icon{
+    float: right;
+    margin-top: 4rem;
+}
+.menu-icon ion-icon{
+    font-size: 4rem;
+    color:#fff;
+    border:.1rem solid #fff;
+    cursor:pointer;
+}
+.hero-text-box{
+    position: absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform:translate(-50%, -50%);
+    transform:translate(-50%, -50%);
+    text-align: center;
+}
+h1{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 6.5rem;
+    margin: 0;
+    display: inline-block;
+}
+h1::before {
+    content:'';
+    height:.2rem;
+    background-color: #98b4be;
+    display:block;
+}
+h1::after {
+    content:'';
+    height:.2rem;
+    background-color: #98b4be;
+    display:block;
+}
+.hero-text-box span{
+    font-size: 2.2rem;
+    margin-top: .5rem;
+    display: block;
+}
+.arrow-icon a{
+    position:absolute;
+    width: 4rem;
+    display: inline-block;
+    bottom: 4rem;
+    left: 0;
+    right: 0;
+    margin:auto;
+}
+.arrow-icon a ion-icon{
+    font-size: 4rem;
+    color: #fff;
+    position:relative;
+    -webkit-animation:3s arrow infinite ease;
+    animation:3s arrow infinite ease;
+}
+@-webkit-keyframes arrow{
+    0%{
+        top:1rem;
+    }
+    50%{
+        top:3rem;
+    }
+    100%{
+        top:1rem;
+    }
+}
+@keyframes arrow{
+    0%{
+        top:1rem;
+    }
+    50%{
+        top:3rem;
+    }
+    100%{
+        top:1rem;
+    }
+}
+/*=========================
+Menu Container
+===========================*/
+.menu-container{
+    background-color: rgba(0, 0, 0, 0.90);
+    width:100%;
+    height:0vh;
+    position:fixed;
+    top:0;
+    left:0;
+    z-index:9999;
+    overflow: hidden;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+.close-btn{
+    position: absolute;
+    top:4rem;
+    right:11rem;
+}
+.close-btn ion-icon{
+    font-size: 4rem;
+    color:#fff;
+    border:0.1rem solid #fff;
+    cursor:pointer;
+}
+.menu-item{
+    position: absolute;
+    top:50%;
+    left:50%;
+    -webkit-transform:translate(-50%, -50%);
+    transform:translate(-50%, -50%);
+}
+.menu-item ul{
+    list-style-type: none;
+    text-align: center;
+}
+.menu-item ul a{
+    font-size: 3.7rem;
+    color:#fff;
+    text-transform: capitalize;
+}
+.menu-item ul a:hover{
+    font-size: 4rem;
+    color:#ff2b4a;
+    -webkit-transition: all .3s;
+    transition: all .3s;
+}
+/*=========================
+5.About Section
+===========================*/
+.grid-about{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap:3rem;
+}
+.paul{
+    -webkit-clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+    width:90%;
+}
+h4{
+    font-size: 2.2rem;
+    color: #000;
+}
+.about-item p{
+    margin:2.5rem 0;
+    color: #000;
+}
+.about-btn{
+    background-color: #FF2B4A;
+    display: inline-block;
+    -webkit-transition:all .3s;
+    transition:all .3s;
+}
+.about-btn:hover{
+    background-color: transparent;
+    color:#FF2B4A;
+    border:0.2rem solid #FF2B4A;
+}
+/*=========================
+6.Process Section
+===========================*/
+#process{
+    background: #ebebeb;
+}
+.process-title{
+    text-align: center;
+}
+.process-title h2{
+    font-size: 4.5rem;
+    color: #000;
+}
+.process-title span{
+    font-size: 1.8rem;
+    color: #000;
+}
+.process-grid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 1.5rem;
+    margin-top: 4rem;
+}
+.process-item{
+    background: #000;
+    text-align: center;
+    padding: 5rem 3rem;
+    color: #fff;
+}
+.process-icon ion-icon{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+.process-item h4{
+    color: #fff;
+    text-transform: uppercase;
+}
+.process-item:nth-child(1){
+    background: #10c6fc;
+}
+.process-item:nth-child(2){
+    background: #835aeb;
+}
+.process-item:nth-child(3){
+    background: #002453;
+}
+.process-item:nth-child(4){
+    background: #ff2b4a;
+}
+/*=========================
+7.Experience Section
+===========================*/
+#exp{
+    background:url(img/experience.jpg) no-repeat center/ cover fixed;
+}
+.exp-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+    color:#fff;
+}
+.exp-item{
+    background: rgba(0, 0, 0, 0.8);
+    padding:4rem;
+}
+.exp-item h3{
+    color:#fff;
+    font-size: 3rem;
+    margin: 2rem 0;
+}
+.exp-item h5{
+    color:#fff;
+    font-size: 2rem;
+    margin: 2rem 0;
+}
+.exp-item span{
+    font-size: 1.8rem;
+    margin: 2rem 0;
+}
+.exp-item p{
+    font-size: 1.6rem;
+    margin: 2rem 0;
+}
+hr{
+    border:none;
+    border-bottom: .1rem solid #fff;
+}
+/*=========================
+8.Work Section
+===========================*/
+#work{
+    text-align: center;
+}
+.work-title{
+    margin-bottom: 3rem;
+}
+.work-title h2{
+    font-size: 4.5rem;
+    color: #000;
+}
+.work-title span{
+    font-size: 1.8rem;
+    color: #000;
+}
+.work-filter{
+    margin-bottom: 3rem;
+}
+.work-filter ul li{
+    list-style-type: none;
+    display: inline-block;
+    background: #000;
+    font-size: 1.8rem;
+    padding:.5rem 2rem;
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0 1rem;
+    cursor:pointer;
+}
+.work-grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1rem;
+    grid-auto-rows:25rem;
+}
+.work-item img{
+    height:100%;
+}
+.work-item:nth-child(5){
+    grid-column:1/3;
+}
+.work-filter .mixitup-control-active{
+    background-color:#ff2b4a;
+}
+/*=========================
+9.Testimonial Section
+===========================*/
+#testimonial{
+    background: url(img/testimonial.jpg) no-repeat left top / cover;
+}
+.testimonial-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+.quote img{
+    width:6rem;
+}
+.des p{
+    font-size: 1.6rem;
+    color:#000;
+    margin:4rem 0;
+}
+.sign img{
+    width:12rem;
+}
+.name h6{
+    color:#000;
+    font-size: 2rem;
+    margin:2rem 0;
+}
+.title span{
+    font-size: 1.6rem;
+    color:#000;
+    margin:2rem 0;
+}
+/*=========================
+10.Contact Section
+===========================*/
+#contact{
+    background:url(img/contact.jpg) no-repeat center /cover fixed;
+}
+.contact-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+}
+.right-item{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+}
+.contact-item:nth-child(1){
+    background: rgba(0, 0, 0, 0.8);
+    padding:4rem;
+}
+.child-item{
+    background: rgba(0, 0, 0, 0.8); 
+    padding:4rem;
+}
+h3{
+    color:#fff;
+    font-size: 3rem;
+    text-transform: uppercase;
+}
+form input[type="text"],
+form input[type="email"],
+form textarea { 
+    width:100%;
+    padding:1rem;
+    font-size: 1.6rem;
+    margin:1rem 0;
+    background:transparent;
+    border:.1rem solid #fff;
+    color:#fff;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+form textarea {
+    height: 15rem;
+}
+.my-button{
+    text-align: right;
+}
+.contact-btn{
+    display:inline-block;
+    margin-top: 3rem;
+    background:#ff2b4a;
+    border:0.2rem solid #FF2B4A;
+    cursor:pointer;
+}
+.contact-btn:hover{
+    background:#fff;
+    color:#FF2B4A;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+.child-item p{
+    color:#fff;
+    font-size: 1.6rem;
+    margin:0;
+    margin:1rem 0;
+}
+/*=========================
+10.Footer Section
+===========================*/
+#footer{
+    background:#222222;
+    text-align: center;
+}
+.social-icon ul{
+    margin:0;
+    padding:0;
+    margin-bottom: 2rem;
+}
+.social-icon ul li {
+    text-decoration: none;
+    display:inline-block;
+}
+
+.social-icon ul li a{
+    color: #fff;
+    font-size: 2rem;
+}
+.social-icon ul li a ion-icon{
+    border-right: .2rem solid #fff;
+    padding:0 .5rem;
+}
+.social-icon ul li a ion-icon:hover{
+    color:#ff2b4a;
+}
+.footer-text h6{
+    color:#fff;
+    text-transform: capitalize;
+    font-size: 1.3rem;
+}
+.footer-text h6 a{
+    color:#ff2b4a;
+}
+.arrow-top a ion-icon{
+    color:#fff;
+    font-size: 3rem;
+    padding: .5rem;
+    border: .1rem solid #fff;
+    -webkit-transition: 1s;
+    transition: 1s;
+}
